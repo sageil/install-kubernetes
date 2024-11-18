@@ -6,10 +6,6 @@
 
 ## Steps
 
-1. Prepare servers
+1. Prepare servers by executing `sudo ./prepare.sh` on all servers
 
-  Execute `prepare.sh` on all servers
-
-2. Configure Control Plane Nodes (master nodes)
-
-  Execute `control-plane-servers.sh` using `sudo ./control-plane-servers.sh`
+2. Configure Control Plane Nodes (master nodes) by executing `sudo ./control-plane-servers.sh` on all control planes
