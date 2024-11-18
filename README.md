@@ -9,3 +9,4 @@
 1. Prepare servers by executing `sudo ./prepare.sh` on all servers
 
 2. Configure Control Plane Nodes (master nodes) by executing `sudo ./control-plane-servers.sh` on all control planes
+3. Use the generated join command on all worker nodes
