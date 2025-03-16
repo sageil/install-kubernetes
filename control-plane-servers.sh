@@ -19,13 +19,12 @@ kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.0
 
 echo "Setting up Calico custom resources"
 
+# download calico custom resources and modify the default cidr to 10.10.0.0/16 instead of the default 192.168.0.0/16
+
 curl -O https://raw.githubusercontent.com/projectcalico/calico/v3.29.0/manifests/custom-resources.yaml
 sed -i 's/cidr: 192\.168\.0\.0\/16/cidr: 10.10.0.0\/16/g' custom-resources.yaml
+kubectl apply -f custom-resources.yaml
 
-echo "Installing calicoctl"
-
-sudo curl -L https://github.com/projectcalico/calico/releases/download/v3.29.0/calicoctl-linux-amd64 -o /usr/local/bin/calicoctl
-sudo chmod +x /usr/local/bin/calicoctl
 
 echo "Installing Helm"
 

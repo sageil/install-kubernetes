@@ -1,4 +1,4 @@
-# Install kubernetes on Ubuntu 22+
+# Install kubernetes on Ubuntu 22+ using containerd runtime
 
 > [!TIP]
 > The default cider used in this installation is 10.10.0.0/16.
